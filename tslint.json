@@ -122,9 +122,7 @@
     ],
     "component-selector": [
       true,
-      "element",
-      "app",
-      "kebab-case"
+      "demo"
     ],
     "use-input-property-decorator": true,
     "use-output-property-decorator": true,
