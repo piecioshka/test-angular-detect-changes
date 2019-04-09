@@ -1,11 +1,13 @@
 import {
   Component, OnInit, OnChanges, DoCheck,
   OnDestroy, AfterContentInit, AfterContentChecked, AfterViewInit,
-  AfterViewChecked
+  AfterViewChecked,
+  ChangeDetectorRef
 } from '@angular/core';
 
 const console = {
   log: require('debug')('root.component:log'),
+  warn: (typeof window === 'object' && window || global).console.warn,
   group: (typeof window === 'object' && window || global).console.group,
   groupEnd: (typeof window === 'object' && window || global).console.groupEnd
 };
@@ -16,6 +18,20 @@ const console = {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit, OnChanges, DoCheck, OnDestroy, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
+
+  constructor(
+    private changeDetection: ChangeDetectorRef
+  ) { }
+
+  public onDisableHandler() {
+    this.changeDetection.detach();
+    console.warn(' ⚠️ ChangeDetection on this component is detached');
+  }
+
+  public onEnableHandler() {
+    this.changeDetection.reattach();
+    console.warn(' ⚠️ ChangeDetection on this component is reattached');
+  }
 
   public onClickHandler() {
     // nic nie rób

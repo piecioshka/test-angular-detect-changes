@@ -3,11 +3,12 @@
 import {
   Component,
   AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
-  OnInit, DoCheck, OnChanges, OnDestroy
+  OnInit, DoCheck, OnChanges, OnDestroy, ChangeDetectorRef
 } from '@angular/core';
 
 const console = {
-  log: require('debug')('channel-list.component:log')
+  log: require('debug')('channel-list.component:log'),
+  warn: (typeof window === 'object' && window || global).console.warn
 };
 
 @Component({
@@ -15,6 +16,20 @@ const console = {
   templateUrl: './channel-list.component.html'
 })
 export class ChannelListComponent implements OnInit, OnChanges, DoCheck, OnDestroy, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
+
+  constructor(
+    private changeDetection: ChangeDetectorRef
+  ) { }
+
+  public onDisableHandler() {
+    this.changeDetection.detach();
+    console.warn(' ⚠️ ChangeDetection on this component is detached');
+  }
+
+  public onEnableHandler() {
+    this.changeDetection.reattach();
+    console.warn(' ⚠️ ChangeDetection on this component is reattached');
+  }
 
   public onClickHandler() {
     // nic nie rób

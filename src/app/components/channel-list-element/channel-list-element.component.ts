@@ -17,8 +17,9 @@ export class ChannelListElementComponent implements OnInit, OnChanges, DoCheck, 
 
   @Input() name = null;
 
-  constructor(private changeDetection: ChangeDetectorRef) {
-  }
+  constructor(
+    private changeDetection: ChangeDetectorRef
+  ) { }
 
   public onDisableHandler() {
     this.changeDetection.detach();
