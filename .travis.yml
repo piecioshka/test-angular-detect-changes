@@ -13,7 +13,7 @@ node_js:
   - "8"
 
 script:
-  - npm run test
+  - npm run test -- --watch false
   - npm run e2e
 
 addons:
