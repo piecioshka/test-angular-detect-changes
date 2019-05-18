@@ -5,7 +5,6 @@ sudo: true
 os:
   - linux
   - osx
-  - windows
 
 node_js:
   - "12"
