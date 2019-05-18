@@ -10,7 +10,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "protractor": "protractor e2e/protractor.conf.js",
+    "protractor": "protractor protractor.conf.js",
     "predeploy": "ng build --prod --base-href=/test-angular-detect-changes/",
     "deploy": "cross-env NODE_DEBUG=gh-pages gh-pages -d dist/test-angular-detect-changes"
   },

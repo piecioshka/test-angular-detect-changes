@@ -12,9 +12,9 @@ node_js:
   - "9"
   - "8"
 
+addons:
+  chrome: stable
+
 script:
   - npm run test -- --watch false
   - npm run e2e
-
-addons:
-  chrome: stable
