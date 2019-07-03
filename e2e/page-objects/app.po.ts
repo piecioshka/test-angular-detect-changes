@@ -6,10 +6,10 @@ export class HomePage {
   }
 
   getList() {
-    return element(by.css('demo-channel-list'));
+    return element(by.css('demo-list'));
   }
 
   getItems() {
-    return this.getList().$$('demo-channel-list-element');
+    return this.getList().$$('demo-item');
   }
 }

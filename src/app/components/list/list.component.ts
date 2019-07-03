@@ -1,21 +1,19 @@
 import {
-  Component, Input, ChangeDetectorRef,
+  Component,
   AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
-  OnInit, DoCheck, OnChanges, OnDestroy
+  OnInit, DoCheck, OnChanges, OnDestroy, ChangeDetectorRef
 } from '@angular/core';
 
 const console = {
-  log: require('debug')('channel-list-element.component:log'),
+  log: require('debug')('list.component:log'),
   warn: (typeof window === 'object' && window || global).console.warn
 };
 
 @Component({
-  selector: 'demo-channel-list-element',
-  templateUrl: './channel-list-element.component.html'
+  selector: 'demo-list',
+  templateUrl: './list.component.html'
 })
-export class ChannelListElementComponent implements OnInit, OnChanges, DoCheck, OnDestroy, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
-
-  @Input() name = null;
+export class ListComponent implements OnInit, OnChanges, DoCheck, OnDestroy, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
 
   constructor(
     private changeDetection: ChangeDetectorRef
@@ -67,7 +65,4 @@ export class ChannelListElementComponent implements OnInit, OnChanges, DoCheck, 
     console.log(' ↳ AfterViewChecked');
   }
 
-  public calculate(): void {
-    console.warn(' ♨️ calculate (name=' + this.name + ')');
-  }
 }

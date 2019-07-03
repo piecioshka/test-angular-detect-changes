@@ -1,25 +1,31 @@
 import { TestBed, async } from '@angular/core/testing';
 
 import { AppComponent } from './app.component';
-import { ChannelListComponent } from '../channel-list/channel-list.component';
-import { ChannelListElementComponent } from '../channel-list-element/channel-list-element.component';
+import { ListComponent } from '../list/list.component';
+import { ItemComponent } from '../item/item.component';
 
 describe('AppComponent', () => {
   let fixture = null;
   let component = null;
+  let $component = null;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
-        ChannelListComponent,
-        ChannelListElementComponent
+        ListComponent,
+        ItemComponent
       ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AppComponent);
     component = fixture.debugElement.componentInstance;
+    $component = fixture.nativeElement;
   }));
+
+  afterEach(() => {
+    $component.remove();
+  });
 
   it('should create the component', async(() => {
     expect(component).toBeTruthy();

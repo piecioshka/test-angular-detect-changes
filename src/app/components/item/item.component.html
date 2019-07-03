@@ -1,11 +1,13 @@
 <fieldset>
 
-  <legend>root.component</legend>
+  <legend>item.component</legend>
 
   <button (click)="onClickHandler()">click</button>
   <button (click)="onDisableHandler()">✖︎</button>
   <button (click)="onEnableHandler()">▶︎</button>
 
-  <demo-list></demo-list>
+  <p>item: {{ name }}</p>
+
+  {{ calculate() }}
 
 </fieldset>

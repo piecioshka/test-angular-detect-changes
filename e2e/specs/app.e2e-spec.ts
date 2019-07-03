@@ -8,11 +8,11 @@ describe('test-angular-detect-changes App', () => {
     page.navigateTo();
   });
 
-  it('should display list of channels', () => {
+  it('should display list', () => {
     expect(page.getList().isPresent()).toBeTruthy();
   });
 
-  it('should display list of channels', () => {
+  it('should display items', () => {
     expect(page.getItems().count()).toEqual(3);
   });
 });
