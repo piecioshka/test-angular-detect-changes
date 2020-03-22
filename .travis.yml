@@ -1,12 +1,11 @@
 language: node_js
 
-sudo: true
-
 os:
   - linux
   - osx
 
 node_js:
+  - "13"
   - "12"
   - "11"
   - "10"
@@ -17,5 +16,5 @@ addons:
   chrome: stable
 
 script:
-  - npm run test -- --watch false
-  - npm run e2e
+  - npm run test
+  # - npm run e2e
