@@ -15,7 +15,7 @@ const console = {
 })
 export class ItemComponent implements OnInit, OnChanges, DoCheck, OnDestroy, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
 
-  @Input() name = null;
+  @Input() name: string = null;
 
   constructor(
     private changeDetection: ChangeDetectorRef
@@ -23,12 +23,12 @@ export class ItemComponent implements OnInit, OnChanges, DoCheck, OnDestroy, Aft
 
   public onDisableHandler() {
     this.changeDetection.detach();
-    console.warn(' ⚠️ ChangeDetection on this component is detached');
+    console.warn(' ⚠️ ChangeDetection on this component is detached (name=' + this.name + ')');
   }
 
   public onEnableHandler() {
     this.changeDetection.reattach();
-    console.warn(' ⚠️ ChangeDetection on this component is reattached');
+    console.warn(' ⚠️ ChangeDetection on this component is reattached (name=' + this.name + ')');
   }
 
   public onClickHandler() {

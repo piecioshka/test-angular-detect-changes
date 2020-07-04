@@ -24,12 +24,12 @@ export class AppComponent implements OnInit, OnChanges, DoCheck, OnDestroy, Afte
 
   public onDisableHandler() {
     this.changeDetection.detach();
-    console.warn(' ⚠️ ChangeDetection on this component is detached');
+    console.warn(' ⚠️ ChangeDetection on this component is detached (app)');
   }
 
   public onEnableHandler() {
     this.changeDetection.reattach();
-    console.warn(' ⚠️ ChangeDetection on this component is reattached');
+    console.warn(' ⚠️ ChangeDetection on this component is reattached (app)');
   }
 
   public onClickHandler() {

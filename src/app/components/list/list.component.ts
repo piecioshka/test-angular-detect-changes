@@ -21,12 +21,12 @@ export class ListComponent implements OnInit, OnChanges, DoCheck, OnDestroy, Aft
 
   public onDisableHandler() {
     this.changeDetection.detach();
-    console.warn(' ⚠️ ChangeDetection on this component is detached');
+    console.warn(' ⚠️ ChangeDetection on this component is detached (list)');
   }
 
   public onEnableHandler() {
     this.changeDetection.reattach();
-    console.warn(' ⚠️ ChangeDetection on this component is reattached');
+    console.warn(' ⚠️ ChangeDetection on this component is reattached (list)');
   }
 
   public onClickHandler() {
