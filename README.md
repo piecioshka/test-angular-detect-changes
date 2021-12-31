@@ -1,6 +1,6 @@
 # test-angular-detect-changes
 
-[![travis](https://img.shields.io/travis/piecioshka/test-angular-detect-changes.svg)](https://travis-ci.org/piecioshka/test-angular-detect-changes)
+[![travis-ci](https://api.travis-ci.com/piecioshka/test-angular-detect-changes.svg?branch=master)](https://app.travis-ci.com/github/piecioshka/test-angular-detect-changes)
 
 :ledger: Test Angular detect changes mechanism
 
