@@ -16,5 +16,5 @@ addons:
   chrome: stable
 
 script:
-  - npm run test
+  - npm run test:ci
   # - npm run e2e
