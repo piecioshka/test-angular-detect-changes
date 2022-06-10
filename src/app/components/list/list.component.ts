@@ -65,4 +65,8 @@ export class ListComponent implements OnInit, OnChanges, DoCheck, OnDestroy, Aft
     console.log(' ↳ AfterViewChecked');
   }
 
+  public calculate(): void {
+    console.warn(' ♨️ calculate (list)');
+  }
+
 }

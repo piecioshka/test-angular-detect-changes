@@ -70,4 +70,8 @@ export class AppComponent implements OnInit, OnChanges, DoCheck, OnDestroy, Afte
     console.groupEnd();
   }
 
+  public calculate(): void {
+    console.warn(' ♨️ calculate (root)');
+  }
+
 }
