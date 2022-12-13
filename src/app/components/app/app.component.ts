@@ -5,8 +5,10 @@ import {
   ChangeDetectorRef
 } from '@angular/core';
 
+import debug from 'debug';
+
 const console = {
-  log: require('debug')('root.component:log'),
+  log: debug('root.component:log'),
   warn: (typeof window === 'object' && window || global).console.warn,
   group: (typeof window === 'object' && window || global).console.group,
   groupEnd: (typeof window === 'object' && window || global).console.groupEnd

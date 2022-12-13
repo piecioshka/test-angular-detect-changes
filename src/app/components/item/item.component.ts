@@ -4,8 +4,10 @@ import {
   OnInit, DoCheck, OnChanges, OnDestroy
 } from '@angular/core';
 
+import debug from 'debug';
+
 const console = {
-  log: require('debug')('item.component:log'),
+  log: debug('item.component:log'),
   warn: (typeof window === 'object' && window || global).console.warn
 };
 
