@@ -2,6 +2,6 @@
 
 :ledger: Test Angular detect changes mechanism
 
-## Demo 🎉
+## Preview 🎉
 
 <https://piecioshka.github.io/test-angular-detect-changes/>
